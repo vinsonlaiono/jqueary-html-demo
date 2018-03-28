@@ -1,12 +1,11 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
 .container{
     min-height: 500px;
     width: 960px;
     margin: 0px auto;
     background-color: rgb(122, 122, 196);
+}
+pre {
+    display: inline-block;
 }
 .header{
     width: 98%;
