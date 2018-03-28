@@ -7,7 +7,61 @@
     <script></script>
 </head>
 <body>
-    <div class="container">
+    <div class="content_block">
+
+        <h1>.html()</h1>
+        <p>Using jQuery in your HTML document, you can use the <b>.html()</b> function to:</p>
+        <ul>
+            <li><b>get</b> the HTML contents of the <b>first</b> element in the set of matched elements, or </li>
+            <li><b>set</b> the HTML contents of <b>every</b> matched element.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Using .html() as a getter</h2>
+        <p>In an HTML document, <b>.html()</b> can be used to get the contents of any element. If the selector matches more than one element, only the <b>first</b> match will have its HTML content returned. Take a look at this code:</p>
+        
+        <pre>$( "div.container" ).html();</pre>
+
+        <p>In order to get the &lt;div&gt;'s content, it would have to be the first one with <b>class="container"</b> in the document:</b></p>
+        
+        <pre>&lt;div class="container"&gt;
+    &lt;div class="box">Sample Box&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <p>The function would return the following:</p>
+
+        <pre>&lt;div class="box">Sample Box&lt;/div&gt;</pre>
+
+        <p>This method uses the browser's <b>innerHTML</b> property.</p>
+
+        <hr>
+
+        <h2>Using .html() as a setter</h2>
+
+        <p>When <b>.html()</b> is used to set an element's content, any content that was in that element is <b>replaced</b> by your new content.</p>
+        <p>Take a look at the following HTML:</p>
+
+        <pre>&lt;div class="container"&gt;
+    &lt;div class="box">Sample Box&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <p>The content of <b>&lt;div class="container"&gt;</b> can be set like this:</p>
+
+        <pre>$( "div.container" ).html( "&lt;p&gt;My new content.&lt;/p&gt;" );</pre>
+
+        <p>That line of code will replace everything inside <b>&lt;div class="container"&gt;</b>:</p>
+
+        <pre>&lt;div class="container"&gt;
+    &lt;p&gt;My new content.&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+    </div>
+    <div class="content_footer_block">
+        Prepared by Vinson Aiono and Abel Araya.
+    </div>
+
+    <!-- <div class="container">
         
         <h1 class="header">jQuery HTML Demo</h1>
         <h1 class="header">.html()</h1>
@@ -27,6 +81,17 @@
             <ul>
                 <li>This method does not take any arguments.</li>
             </ul>
+            In an HTML document, <b>.html()</b> can be used to get the contents of any element. If the selector expression matches more than one element, only the first match will have its HTML content returned. Consider this code:<br /><br />
+            <pre>$( "div.demo-container" ).html();</pre><br /><br />
+            In order for the following <b>&lt;div&gt;</b>'s content to be retrieved, it would have to be the first one with <b>class="demo-container"</b> in the document:<br /><br />
+            <pre>    &lt;div class=&quot;demo-container&quot;&gt;
+        &lt;div class=&quot;demo-box&quot;&gt;Demonstration Box&lt;/div&gt;
+    &lt;/div&gt;</pre><br /><br />
+            The result would look like this:<br /><br />
+            <pre>
+                <div class="demo-box">Demonstration Box</div>
+            </pre><br /><br />
+            This method uses the browser's <b>innerHTML</b> property. Some browsers may not return HTML that exactly replicates the HTML source in an original document. For example, Internet Explorer sometimes leaves off the quotes around attribute values if they contain only alphanumeric characters.
         </div>
         <div class="main_example">
             <p>Title for 1st example of html function</p>
@@ -35,10 +100,10 @@
                 <div class="example"></div> 
             </div>     
             <div class="first">
-                <h5>Code</h5>                   <!-- div box for 1st example of html function -->
+                <h5>Code</h5>                   
                 <div class="example"></div> 
-            </div>                                        <!-- div box for displaying code of example -->
-        </div>                                            <!-- div box for displaying code of example -->
+            </div>                                      
+        </div>                                           
         
         <div class="main_content">
             <h2>SET: .html( htmlString ) -- returns jQuery object</h2>
@@ -61,14 +126,14 @@
                 <div class="example"></div> 
             </div>     
             <div class="first">
-                <h5>Code</h5>                   <!-- div box for 1st example of html function -->
+                <h5>Code</h5>                   
                 <div class="example"></div> 
-            </div>                                        <!-- div box for displaying code of example -->
+            </div>                                        
         </div>
 
         <div class="footer">
             Prepared by Vinson Aiono and Abel Araya.
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
